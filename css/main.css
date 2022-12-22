@@ -1,4 +1,40 @@
 @charset "UTF-8";
+@font-face {
+  font-family: "kyivtype_titlingbold2";
+  src: url("../font/kyivtypetitling-bold2-webfont.woff2") format("woff2"), url("../font/kyivtypetitling-bold2-webfont.woff") format("woff"), url("../font/kyivtypetitling-bold2-webfont.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "kyivtype_titlingmedium";
+  src: url("../font/kyivtypetitling-medium-webfont.woff2") format("woff2"), url("../font/kyivtypetitling-medium-webfont.woff") format("woff"), url("../font/kyivtypetitling-medium-webfont.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "kyivtype_titlingmedium2";
+  src: url("../font/kyivtypetitling-medium2-webfont.woff2") format("woff2"), url("../font/kyivtypetitling-medium2-webfont.woff") format("woff"), url("../font/kyivtypetitling-medium2-webfont.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "kyivtype_titlingmedium3";
+  src: url("../font/kyivtypetitling-medium3-webfont.woff2") format("woff2"), url("../font/kyivtypetitling-medium3-webfont.woff") format("woff"), url("../font/kyivtypetitling-medium3-webfont.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "kyivtype_titlingregular";
+  src: url("../font/kyivtypetitling-regular-webfont.woff2") format("woff2"), url("../font/kyivtypetitling-regular-webfont.woff") format("woff"), url("../font/kyivtypetitling-regular-webfont.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "kyivtype_titlingregular2";
+  src: url("../font/kyivtypetitling-regular2-webfont.woff2") format("woff2"), url("../font/kyivtypetitling-regular2-webfont.woff") format("woff"), url("../font/kyivtypetitling-regular2-webfont.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
 html {
   scroll-behavior: smooth;
 }
@@ -268,42 +304,6 @@ textarea {
   --time-of-animation: 250ms;
 }
 
-@font-face {
-  font-family: "kyivtype_titlingbold2";
-  src: url("../font/kyivtypetitling-bold2-webfont.woff2") format("woff2"), url("../font/kyivtypetitling-bold2-webfont.woff") format("woff"), url("../font/kyivtypetitling-bold2-webfont.ttf") format("ttf");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "kyivtype_titlingmedium";
-  src: url("../font/kyivtypetitling-medium-webfont.woff2") format("woff2"), url("../font/kyivtypetitling-medium-webfont.woff") format("woff"), url("../font/kyivtypetitling-medium-webfont.ttf") format("ttf");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "kyivtype_titlingmedium2";
-  src: url("../font/kyivtypetitling-medium2-webfont.woff2") format("woff2"), url("../font/kyivtypetitling-medium2-webfont.woff") format("woff"), url("../font/kyivtypetitling-medium2-webfont.ttf") format("ttf");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "kyivtype_titlingmedium3";
-  src: url("../font/kyivtypetitling-medium3-webfont.woff2") format("woff2"), url("../font/kyivtypetitling-medium3-webfont.woff") format("woff"), url("../font/kyivtypetitling-medium3-webfont.ttf") format("ttf");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "kyivtype_titlingregular";
-  src: url("../font/kyivtypetitling-regular-webfont.woff2") format("woff2"), url("../font/kyivtypetitling-regular-webfont.woff") format("woff"), url("../font/kyivtypetitling-regular-webfont.ttf") format("ttf");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "kyivtype_titlingregular2";
-  src: url("../font/kyivtypetitling-regular2-webfont.woff2") format("woff2"), url("../font/kyivtypetitling-regular2-webfont.woff") format("woff"), url("../font/kyivtypetitling-regular2-webfont.ttf") format("ttf");
-  font-weight: normal;
-  font-style: normal;
-}
 @media screen and (max-width: 767.98px) {
   .header {
     z-index: 40;
@@ -785,27 +785,27 @@ textarea {
   transform: scale(1.02);
 }
 
-.projects-list__item:nth-child(6n+1) > .projects-list__link::after {
+#project-1::after {
   content: "АЙДЕНТИКА ТА ЛОГО";
 }
 
-.projects-list__item:nth-child(6n+2) > .projects-list__link::after {
-  content: "ПАКОВАННЯ";
+#project-2::after {
+  content: "ПАКУВАННЯ";
 }
 
-.projects-list__item:nth-child(6n+3) > .projects-list__link::after {
+#project-3::after {
   content: "ТИПОГРАФІКА ТА ШРИФТИ";
 }
 
-.projects-list__item:nth-child(6n+4) > .projects-list__link::after {
+#project-4::after {
   content: "ПОСТЕРИ";
 }
 
-.projects-list__item:nth-child(6n+5) > .projects-list__link::after {
+#project-5::after {
   content: "UX/UI DESIGN";
 }
 
-.projects-list__item:nth-child(6n+6) > .projects-list__link::after {
+#project-6::after {
   content: "АНІМАЦІЯ";
 }
 
@@ -824,7 +824,7 @@ textarea {
   backdrop-filter: blur(4.5px);
 }
 
-.projects-list__item:nth-child(6n+1) > .projects-list__link::after, .projects-list__item:nth-child(6n+2) > .projects-list__link::after, .projects-list__item:nth-child(6n+3) > .projects-list__link::after, .projects-list__item:nth-child(6n+4) > .projects-list__link::after, .projects-list__item:nth-child(6n+5) > .projects-list__link::after, .projects-list__item:nth-child(6n+6) > .projects-list__link::after {
+#project-1::after, #project-2::after, #project-3::after, #project-4::after, #project-5::after, #project-6::after {
   text-align: center;
   color: var(--banner-text-color);
   font-size: 38px;
@@ -834,12 +834,12 @@ textarea {
   transform: translate(-50%, -50%);
 }
 @media screen and (min-width: 768px) {
-  .projects-list__item:nth-child(6n+1) > .projects-list__link::after, .projects-list__item:nth-child(6n+2) > .projects-list__link::after, .projects-list__item:nth-child(6n+3) > .projects-list__link::after, .projects-list__item:nth-child(6n+4) > .projects-list__link::after, .projects-list__item:nth-child(6n+5) > .projects-list__link::after, .projects-list__item:nth-child(6n+6) > .projects-list__link::after {
+  #project-1::after, #project-2::after, #project-3::after, #project-4::after, #project-5::after, #project-6::after {
     font-size: 27px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .projects-list__item:nth-child(6n+1) > .projects-list__link::after, .projects-list__item:nth-child(6n+2) > .projects-list__link::after, .projects-list__item:nth-child(6n+3) > .projects-list__link::after, .projects-list__item:nth-child(6n+4) > .projects-list__link::after, .projects-list__item:nth-child(6n+5) > .projects-list__link::after, .projects-list__item:nth-child(6n+6) > .projects-list__link::after {
+  #project-1::after, #project-2::after, #project-3::after, #project-4::after, #project-5::after, #project-6::after {
     font-size: 44px;
   }
 }

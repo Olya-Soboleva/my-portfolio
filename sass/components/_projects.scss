@@ -18,50 +18,42 @@
     transform: scale(1.02);
   }
 }
-
-// .projects-list > .slick-list > .projects-list__item:nth-child(6n + 1) > .projects-list__link {
-//   &::after {
-//     content: '2';
-//     @extend %text-for-banner;
-//   }
-// }
-
-.projects-list__item:nth-child(6n + 1) > .projects-list__link {
+#project-1 {
   &::after {
     content: 'АЙДЕНТИКА ТА ЛОГО';
     @extend %text-for-banner;
   }
 }
 
-.projects-list__item:nth-child(6n + 2) > .projects-list__link {
+#project-2 {
   &::after {
-    content: 'ПАКОВАННЯ';
+    content: 'ПАКУВАННЯ';
     @extend %text-for-banner;
   }
 }
 
-.projects-list__item:nth-child(6n + 3) > .projects-list__link {
+#project-3 {
   &::after {
     content: 'ТИПОГРАФІКА ТА ШРИФТИ';
     @extend %text-for-banner;
   }
 }
 
-.projects-list__item:nth-child(6n + 4) > .projects-list__link {
+#project-4 {
   &::after {
     content: 'ПОСТЕРИ';
     @extend %text-for-banner;
   }
 }
 
-.projects-list__item:nth-child(6n + 5) > .projects-list__link {
+#project-5 {
   &::after {
     content: 'UX/UI DESIGN';
     @extend %text-for-banner;
   }
 }
 
-.projects-list__item:nth-child(6n + 6) > .projects-list__link {
+#project-6 {
   &::after {
     content: 'АНІМАЦІЯ';
     @extend %text-for-banner;
