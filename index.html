@@ -1,12 +1,356 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-</head>
-<body>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SOB_DESIGN-portfolio</title>
+    <link rel="stylesheet" href="/font/stylesheet.css" type="text/css" charset="utf-8" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="./css/main.min.css" />
+  </head>
+  <body>
+    <header class="header">
+      <section class="container top-nav">
+        <div class="logo-wrapper">
+          <a href="/"><img class="logo" src="./images/icon/logo.svg" alt="logo" /></a>
+        </div>
+          <div class="nav_menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </label>
+        
+        <div class="navbar">
+            <nav class="nav">
+            <ul class="nav-list">
+              <li class="nav-list__item">
+                <a class="nav-list__link" href="#intro">Головна</a>
+                <img class="nav-list__icon" src="./images/icon/nav-icon.svg" alt="" />
+              </li>
+              <li class="nav-list__item">
+                <a class="nav-list__link" href="#projects">Проекти</a>
+                <img class="nav-list__icon" src="./images/icon/nav-icon.svg" alt="" />
+              </li>
+              <li class="nav-list__item">
+                <a class="nav-list__link" href="#skills">Навички</a>
+                <img class="nav-list__icon" src="./images/icon/nav-icon.svg" alt="" />
+              </li>
+              <li class="nav-list__item">
+                <a class="nav-list__link" href="#about-myself">Про Себе</a>
+                <img class="nav-list__icon" src="./images/icon/nav-icon.svg" alt="" />
+              </li>
+              <li class="nav-list__item">
+                <a class="nav-list__link" href="#contacts">Контакти</a>
+                <img class="nav-list__icon" src="./images/icon/nav-icon.svg" alt="" />
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+      <div class="backdrop-header is-hidden" data-backdrop></div>
+    </header>
+    <main>
+      <div class="decoration-1">
+        <div class="decoration-1__first-line"></div>
+        <div class="decoration-1__second-line"></div>
+      </div>
+
+      <section class="intro" id="intro">
+        <div class="intro__wrapper container">
+          <div class="intro__picture-wrapper">
+            <div class="intro__picture--decor-line-first"></div>
+              <img class="intro__picture--mobile" 
+                  srcset="./images/me/myself.png 1x, ./images/me/myself@2x.png 2x" 
+                  src="./images/me/myself.png"
+                  alt="Моє фото;)">
+            <div class="intro__picture--decor-line-second"></div>
+              <img class="intro__picture--desktop" 
+                  srcset="./images/me/myself-desktop.png 1x, ./images/me/myself-desktop@2x.png 2x" 
+                  src="./images/me/myself-desktop.png"
+                  alt="Моє фото;)">
+          </div>
+          <div class="intro__info-field">
+            <h1 class="intro__label">Графічний <b>дизайнер</b></h1>
+            <p class="intro__text">
+              Привіт, мене  звати Оля Соболєва, 
+              я графічний та веб дизайнер. 
+              Володію гарними навичками 
+              в створені фірмового стилю, упаковки 
+              та типографіці.
+              Я з радістью втілю твою мрію у реальність!
+            </p>
+            <button data-modal-open class="intro__btn">Зв’яжись</button>
+          </div>
+        </div>
+      </section>
+
+      <div class="decoration-2">
+        <div class="decoration-2__first-line"></div>
+        <div class="decoration-2__second-line"></div>
+      </div>
+
+      <section class="projects" id="projects">
+        <div class="container">
+          <h2 class="projects__label">Проекти</h2>
+          <ul class="projects-list">
+            <li class="projects-list__item">
+              <a class="projects-list__link" href="">
+                <img 
+                  class="projects-list__picture" 
+                  srcset="./images/previews-of-projects/logos-desktop.png 1x, 
+                          ./images/previews-of-projects/logos-desktop@2x.png 2x" 
+                  src="./images/previews-of-projects/logos-desktop.png" 
+                  alt="АЙДЕНТИКА ТА ЛОГО">
+              </a>
+            </li>
+            <li class="projects-list__item">
+              <a class="projects-list__link" href="">
+                <img class="projects-list__picture" 
+                    srcset="./images/previews-of-projects/packages-desktop.png 1x, 
+                          ./images/previews-of-projects/packages-desktop@2x.png 2x" 
+                    src="./images/previews-of-projects/packages-desktop.png" 
+                    alt="ПАКОВАННЯ">
+              </a>
+            </li>
+            <li class="projects-list__item">
+              <a class="projects-list__link" href="">
+                <img
+                    class="projects-list__picture"
+                    srcset="./images/previews-of-projects/fonts-desktop.png 1x, 
+                          ./images/previews-of-projects/fonts-desktop@2x.png 2x" 
+                    src="./images/previews-of-projects/fonts-desktop.png" 
+                    alt="ТИПОГРАФІКА ТА ШРИФТИ">
+              </a>
+            </li>
+            <li class="projects-list__item">
+              <a class="projects-list__link" href="">
+                <img 
+                    srcset="./images/previews-of-projects/posters-desktop.png 1x, 
+                          ./images/previews-of-projects/posters-desktop@2x.png 2x"
+                    class="projects-list__picture" 
+                    src="./images/previews-of-projects/posters-desktop.png" 
+                    alt="ПОСТЕРИ">
+              </a>
+            </li>
+            <li class="projects-list__item">
+              <a class="projects-list__link" href="">
+                <img 
+                    srcset="./images/previews-of-projects/ux-ui-design-desktop.png 1x, 
+                          ./images/previews-of-projects/ux-ui-design-desktop@2x.png 2x"
+                    class="projects-list__picture" 
+                    src="./images/previews-of-projects/ux-ui-design-desktop.png" 
+                    alt="UX/UI DESIGN">
+              </a>
+            </li>
+            <li class="projects-list__item">
+              <a class="projects-list__link" href="">
+                <img
+                    class="projects-list__picture"
+                    srcset="./images/previews-of-projects/animation-desktop.png 1x, 
+                          ./images/previews-of-projects/animation-desktop@2x.png 2x"
+                    src="./images/previews-of-projects/animation-desktop.png" 
+                    alt="АНІМАЦІЯ">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="decoration-1">
+        <div class="decoration-1__first-line"></div>
+        <div class="decoration-1__second-line"></div>
+      </div>
+
+      <section class="skills" id="skills">
+        <div class="container">
+          <h2 class="skills__label">Навички</h2>
+          <ul class="skills-list">
+            <li class="skills-list__item">
+              <img 
+              class="skills-list__icon" 
+              src="./images/icon/ai-icon.svg" 
+              alt="adobe illustrator icon">
+            </li>
+            <li class="skills-list__item">
+              <img 
+              class="skills-list__icon" 
+              src="./images/icon/id-icon.svg" 
+              alt="adobe indesign icon">
+            </li>
+            <li class="skills-list__item">
+              <img 
+              class="skills-list__icon" 
+              src="./images/icon/ps-icon.svg" 
+              alt="adobe photoshop icon">
+            </li>
+            <li class="skills-list__item">
+              <img 
+              class="skills-list__icon" 
+              src="./images/icon/ae-icon.svg" 
+              alt="adobe after effects icon">
+            </li>
+            <li class="skills-list__item">
+              <img 
+              class="skills-list__icon" 
+              src="./images/icon/figma-icon.svg" 
+              alt="figma icon">
+            </li>
+            <li class="skills-list__item">
+              <img 
+              class="skills-list__icon" 
+              src="./images/icon/powerpoint-icon.svg" 
+              alt="powerpoint icon">
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="decoration-2">
+        <div class="decoration-2__first-line"></div>
+        <div class="decoration-2__second-line"></div>
+      </div>
+
+      <section class="about-myself" id="about-myself">
+        <div class="container">
+          <h2 class="about-myself__label">Про себе</h2>
+          <div class="about-myself__wrap-section">
+            <div class="about-myself__wrapper">
+            <span class="about-myself__number-icon">2019</span>
+            <div class="about-myself__decor-line"></div>
+            <p class="about-myself__text">
+              вступила до Харківської академії 
+              дизайну та мистецтв 
+              на графічний дизайн.
+            </p>
+          </div>
+          <div class="about-myself__wrapper">
+            <span class="about-myself__number-icon">2020</span>
+            <div class="about-myself__decor-line"></div>  
+            <p class="about-myself__text">
+              приймала участь у міждонородній
+               онлайн виставці у Кітаї.
+              </p>
+          </div>
+          <div class="about-myself__wrapper">
+            <span class="about-myself__number-icon">2021</span>
+            <div class="about-myself__decor-line"></div>
+            <p class="about-myself__text">
+              пройшла курс з UX/UI design, 
+              для розширення спектру своїх 
+              можливостей. 
+            </p>
+          </div>
+          <div class="about-myself__wrapper">
+            <span class="about-myself__number-icon">2022</span>
+            <div class="about-myself__decor-line"></div>
+            <p class="about-myself__text">
+              навчалась у Львівській 
+              національній академій мистецтв 
+              по мобільності.
+            </p>
+          </div>
+          </div>
+          
+        </div>
+        </section>
+
+        <div class="decoration-1">
+          <div class="decoration-1__first-line"></div>
+          <div class="decoration-1__second-line"></div>
+        </div>
+    </main>
+    <footer>
+      <section class="contacts" id="contacts">
+        <div class="footer-contacts-wrap container">
+          <div class="footer-form-field">
+            <p class="footer-form-field__label">
+            Якщо Ви маєте питання введіть
+            поштову адресу, з Вами зв’яжуться:
+          </p>
+          <form onsubmit="sendEmail(); reset(); return false;" class="form">
+            <input class="form__email" type="email" name="email" id="email-by-click" placeholder="Віддіть поштову адресу" required>
+            <button type="submit" class="form__btn">Зв’яжись</button>
+          </form>
+          </div>
+          <ul class="footer-links-list">
+            <li class="footer-links-list__item">
+              <a class="footer-links-list__link" href="https://t.me/sob_ol7" target="_blank">
+              <img class="footer-links-list__icon" src="./images/icon/telegram-icon.svg" alt="">
+            </a>
+            </li>
+            <li class="footer-links-list__item">
+              <a class="footer-links-list__link" href="https://www.instagram.com/soboleva_17_/" target="_blank">
+                <img class="footer-links-list__icon" src="./images/icon/inst-icon.svg" alt="">
+              </a>
+                
+            </li>
+            <li class="footer-links-list__item">
+              <a class="footer-links-list__link" href="https://www.behance.net/olysob7" target="_blank">
+                <img class="footer-links-list__icon" src="./images/icon/behance-icon.svg" alt="">
+              </a>
+            </li>
+            <li class="footer-links-list__item">
+              <a class="footer-links-list__link" href="mailto:olysob7@gmail.com" target="_blank">
+                <img class="footer-links-list__icon" src="./images/icon/gmail-icon.svg" alt="">
+              </a>
+            </li>
+          </ul>
+      </div>
+      </section>
+    </footer>
+
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button data-modal-close class="modal-btn-close" aria-label="Close">
+          <span aria-hidden="true">&times;</span>   
+        </button>
+        <form onsubmit="sendForm(); reset(); return false;" class="modal-form">
+          <div class="field">
+            <label class="field__label" for="name">Ім'я
+            </label>
+            <div class="field__wrapper">
+              <input type="text" class="field__input" name="name" id="name" placeholder="Введіть ім’я" required/>
+            </div>
+          </div>
+          <div class="field">
+            <label class="field__label" for="email">Поштову адресу</label>
+            <div class="field__wrapper">
+              <input type="text" class="field__input" name="email" id="email" placeholder="Введіть поштову адресу" required/>
+            </div>
+          </div>
+          <div class="field">
+            <label class="field__label" for="message">Коментар</label>
+            <div class="field__wrapper">
+              <textarea
+              name="comment"
+              class="field__textarea"
+              id="message"
+              placeholder="Залишити коментар"
+              ></textarea>
+            </div>
+          </div>
+          <button class="submit__btn" type="submit">Зв’яжись</button>
+        </form>
+      </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     
-</body>
+    <script src="./js/form.js"></script>
+    <script src="./js/slider.js"></script>
+    <script src="./js/mobile-menu.js"></script>
+    <script src="./js/modal.js"></script>
+
+  </body>
 </html>

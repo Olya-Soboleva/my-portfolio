@@ -1,0 +1,231 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Kyiv*Type Titling', 'Prompt', sans-serif;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  letter-spacing: 0.03em;
+  margin: 0;
+
+  &.modal-open {
+    overflow: hidden;
+  }
+  &.lock {
+    overflow: hidden;
+  }
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+label {
+  margin: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  margin: 0 auto;
+
+  @media screen and (max-width: 767.98px) {
+    max-width: 480px;
+
+    &.top-nav {
+      max-width: 100vw;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 1200px;
+  }
+}
+
+section {
+  &.top-nav {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  @media screen and (max-width: 767.98px) {
+    padding: 30px;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.decoration-1 {
+  &:first-child {
+    z-index: 41;
+  }
+
+  display: flex;
+  height: 2px;
+  position: relative;
+  z-index: 15;
+  margin-top: 45px;
+  @media screen and (min-width: 768px) {
+    margin-top: 0;
+  }
+
+  &__first-line {
+    width: 32%;
+    background-color: var(--accent-color);
+  }
+
+  &__second-line {
+    position: relative;
+    width: 100%;
+    margin-left: 30px;
+    background-color: var(--accent-color);
+
+    &::before {
+      content: '';
+      background-image: url(../images/icon/decor-icon.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 23px;
+      height: 23px;
+      position: absolute;
+      top: -11px;
+      left: -11px;
+
+      @media screen and (min-width: 768px) {
+        width: 30px;
+        height: 30px;
+        top: -14px;
+        left: -14px;
+      }
+
+      @media screen and (min-width: 1200px) {
+        width: 39px;
+        height: 39px;
+        top: -18px;
+        left: -18px;
+      }
+    }
+  }
+}
+
+.decoration-2 {
+  display: flex;
+  height: 2px;
+  position: relative;
+  z-index: 15;
+
+  &__first-line {
+    position: relative;
+    width: 100%;
+    margin-right: 30px;
+    background-color: var(--accent-color);
+
+    &::before {
+      content: '';
+      background-image: url(../images/icon/decor-icon.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 23px;
+      height: 23px;
+      position: absolute;
+      top: -11px;
+      right: -11px;
+
+      @media screen and (min-width: 768px) {
+        width: 30px;
+        height: 30px;
+        top: -14px;
+        right: -14px;
+      }
+
+      @media screen and (min-width: 1200px) {
+        width: 39px;
+        height: 39px;
+        top: -18px;
+        right: -18px;
+      }
+    }
+  }
+
+  &__second-line {
+    width: 32%;
+    background-color: var(--accent-color);
+  }
+}
+
+%btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 155px;
+  height: 60px;
+
+  margin: 0 auto;
+  padding: 17px 26px 19px;
+  border: 2px solid var(--accent-color);
+  border-radius: 30px 0px;
+
+  cursor: pointer;
+  background-color: inherit;
+  color: var(--accent-color);
+
+  font-family: 'Kyiv*Type Titling';
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 1.04;
+  text-transform: lowercase;
+
+  transition: color var(--time-of-animation) var(--timing-function),
+    background-color var(--time-of-animation) var(--timing-function);
+
+  @media screen and (min-width: 1200px) {
+    width: 170px;
+    height: 69px;
+    font-size: 23px;
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--color-white);
+    background-color: var(--accent-color);
+  }
+}
+
+%label {
+  font-weight: 350;
+  font-size: 24px;
+  line-height: 1.2;
+  text-transform: uppercase;
+
+  @media screen and (min-width: 768px) {
+    font-size: 26px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 37px;
+  }
+}

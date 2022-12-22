@@ -1,0 +1,137 @@
+.contacts {
+}
+
+.footer-contacts-wrap {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.footer-form-field__label {
+  font-family: 'Prompt';
+  font-size: 18px;
+  line-height: 1.2;
+
+  margin-bottom: 16px;
+  @media screen and (min-width: 768px) {
+    font-size: 20px;
+    line-height: 1.4;
+    max-width: 350px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 24px;
+    max-width: 500px;
+  }
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+
+  @media screen and (min-width: 768px) {
+    justify-content: start;
+    gap: 20px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    gap: 30px;
+  }
+}
+
+.form__email {
+  display: flex;
+  justify-content: center;
+  background-color: inherit;
+  width: 331px;
+  border: 2px solid #ce4e1a;
+  border-radius: 25px 0px;
+  padding: 17px 20px 15px 20px;
+
+  font-family: 'Prompt';
+  font-size: 14px;
+  line-height: 1;
+  margin: 0 auto;
+
+  transition: transform var(--time-of-animation) var(--timing-function);
+  &:hover,
+  &:focus {
+    outline: none;
+    transform: scale(1.02);
+  }
+
+  @media screen and (min-width: 768px) {
+    margin: 0;
+    width: 231px;
+
+    &::placeholder {
+      font-size: 16px;
+    }
+    &[type='email'] {
+      font-size: 16px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin: 0;
+    width: 400px;
+
+    &::placeholder {
+      font-size: 20px;
+    }
+    &[type='email'] {
+      font-size: 20px;
+    }
+  }
+}
+
+.form__btn {
+  @extend %btn;
+  font-size: 16px;
+  line-height: 1.03;
+
+  width: 132px;
+  height: 60px;
+
+  @media screen and (min-width: 768px) {
+    margin: 0;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 20px;
+    width: 152px;
+    height: 67px;
+  }
+}
+
+.footer-links-list {
+  margin-top: 45px;
+  display: flex;
+  justify-content: space-around;
+
+  @media screen and (min-width: 768px) {
+    padding-bottom: 15px;
+    align-items: flex-end;
+    justify-content: none;
+    gap: 35px;
+  }
+  @media screen and (min-width: 1200px) {
+    gap: 55px;
+  }
+}
+
+.footer-links-list__icon {
+  width: 36px;
+  height: 30px;
+
+  transition: transform var(--time-of-animation) var(--timing-function);
+  &:hover,
+  &:focus {
+    transform: scale(1.2);
+  }
+  @media screen and (min-width: 1200px) {
+    width: 50px;
+    height: 40px;
+  }
+}

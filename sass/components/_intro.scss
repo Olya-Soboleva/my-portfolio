@@ -1,0 +1,243 @@
+.intro__wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+
+.intro__picture-wrapper {
+  display: inline-block;
+  margin: 0 auto;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 259px;
+    height: 205px;
+    border: 6px solid #fefaf1;
+    border-radius: 0px 55px;
+    z-index: 20;
+
+    @media screen and (min-width: 768px) {
+      top: 52%;
+      left: 53%;
+      width: 249px;
+      height: 381px;
+      border-radius: 0px 85px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      top: 50%;
+      width: 292px;
+      height: 432px;
+      border: 11px solid #fefaf1;
+      border-radius: 0px 92px;
+    }
+  }
+}
+
+.intro__picture--decor-line-first {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--accent-color);
+  width: 2px;
+  height: 85%;
+
+  @media screen and (min-width: 768px) {
+    height: 95%;
+    &::before {
+      content: '';
+      background-image: url(../images/icon/decor-icon.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 32px;
+      height: 32px;
+      position: absolute;
+      bottom: -15px;
+      right: -15px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    &::before {
+      width: 38px;
+      height: 38px;
+      bottom: -17px;
+      right: -18px;
+    }
+  }
+}
+
+.intro__picture--decor-line-second {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: var(--accent-color);
+  width: 2px;
+  height: 88%;
+
+  &::before {
+    content: '';
+    background-image: url(../images/icon/decor-icon.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 23px;
+    height: 23px;
+    position: absolute;
+    top: -11px;
+    right: -11px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 95%;
+    height: 2px;
+    top: 0;
+    left: 0;
+
+    &::before {
+      width: 32px;
+      height: 32px;
+      top: -15px;
+      right: -15px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    &::before {
+      width: 38px;
+      height: 38px;
+      top: -18px;
+      right: -18px;
+    }
+  }
+}
+
+.intro__picture {
+  &--mobile {
+    padding: 10px;
+    border-top: 2px solid var(--accent-color);
+    border-bottom: 2px solid var(--accent-color);
+
+    width: 305px;
+    height: 243px;
+  }
+
+  &--desktop {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    &--mobile {
+      display: none;
+    }
+
+    &--desktop {
+      display: block;
+      width: 290px;
+      padding-top: 20px;
+      padding-left: 20px;
+
+      @media screen and (min-width: 1200px) {
+        width: 354px;
+      }
+    }
+  }
+}
+
+.intro__label {
+  text-align: center;
+  font-weight: 200;
+  font-size: calc(40px + (67 - 40) * ((100vw - 320px) / (767 - 320)));
+  line-height: 1;
+  letter-spacing: -0.025em;
+  text-transform: uppercase;
+
+  color: var(--color-black);
+
+  margin-top: 20px;
+  margin-bottom: 36px;
+
+  & b {
+    font-weight: 200;
+    letter-spacing: 0.02em;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-top: 0;
+    text-align: start;
+    font-size: 67px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 120px;
+    line-height: 1;
+    letter-spacing: -0.035em;
+  }
+}
+
+.intro__text {
+  position: relative;
+  font-family: 'Prompt';
+  font-weight: 300;
+  font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (767 - 320)));
+  line-height: 1.18;
+
+  max-width: 403px;
+  display: flex;
+  align-items: center;
+
+  margin: 0 auto;
+  margin-bottom: 42px;
+  padding-top: 16px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--accent-color);
+  border-top: 2px solid var(--accent-color);
+
+  @media screen and (min-width: 768px) {
+    border: none;
+    max-width: fit-content;
+    padding-right: 92px;
+    font-size: 16px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: -50%;
+      background-color: var(--accent-color);
+      height: 2px;
+      width: 130%;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: var(--accent-color);
+      height: 2px;
+      width: 100%;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    min-width: 600px;
+    font-size: 25px;
+    line-height: 1.2;
+    padding-right: 166px;
+  }
+}
+
+.intro__btn {
+  @extend %btn;
+
+  @media screen and (min-width: 768px) {
+    margin: 0;
+  }
+}

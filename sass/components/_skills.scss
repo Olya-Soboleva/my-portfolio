@@ -1,0 +1,34 @@
+.skills {
+}
+
+.skills__label {
+  @extend %label;
+}
+
+.skills-list {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+  @media screen and (min-width: 1200px) {
+    gap: 35px;
+  }
+}
+
+.skills-list__item {
+}
+
+.skills-list__icon {
+  width: 66px;
+  height: 51px;
+
+  @media screen and (min-width: 768px) {
+    width: 109px;
+    height: 91px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 163px;
+    height: 134px;
+  }
+}

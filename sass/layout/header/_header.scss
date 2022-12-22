@@ -1,0 +1,231 @@
+.header {
+  @media screen and (max-width: 767.98px) {
+    z-index: 40;
+    position: fixed;
+    align-items: center;
+    left: 0;
+    top: 0;
+    width: 100%;
+    transition: transform 0.3s linear;
+  }
+}
+
+.header.hide-header {
+  transform: translateY(-45px);
+}
+
+.backdrop-header {
+  position: fixed;
+  overflow: hidden;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 16;
+
+  background-color: rgba(169, 169, 169, 0.35);
+  backdrop-filter: blur(3px);
+  transition: backdrop-filter 250ms var(--timing-function);
+  &.is-hidden {
+    backdrop-filter: blur(0);
+    background-color: inherit;
+    pointer-events: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.top-nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 45px;
+  z-index: 18;
+  background-color: var(--bg-color);
+
+  @media screen and (min-width: 768px) {
+    height: 82px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    height: 127px;
+  }
+}
+
+.logo-wrapper {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.logo {
+  width: 60px;
+  height: 20px;
+
+  @media screen and (min-width: 768px) {
+    width: 120px;
+    height: 35px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 160px;
+    height: 52px;
+  }
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  z-index: 17;
+
+  @media screen and (max-width: 767.98px) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    transition: all 0.3s;
+    overflow: hidden;
+    flex-direction: column;
+
+    &.active-burger {
+      transform: translateY(100%);
+    }
+  }
+}
+
+.nav {
+  width: 100%;
+  z-index: 100;
+}
+
+.nav-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: var(--bg-color);
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    gap: 26px;
+  }
+}
+
+.nav-list__item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  @media screen and (max-width: 767.98px) {
+    cursor: pointer;
+    justify-content: space-between;
+    height: 39px;
+    margin-left: 30px;
+    border-bottom: 1.5px solid var(--accent-color);
+
+    &:first-child {
+      margin-top: 20px;
+    }
+
+    &:last-child {
+      margin-bottom: 40px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+  }
+
+  &:hover .nav-list__link,
+  &:focus .nav-list__link {
+    color: var(--accent-color);
+  }
+}
+
+.nav-list__link {
+  text-transform: uppercase;
+  color: var(--text-color);
+
+  font-family: 'Kyiv*Type Titling';
+  font-style: normal;
+  font-weight: 350;
+  font-size: 24px;
+  line-height: 1.2;
+  letter-spacing: -0.08em;
+
+  transition: color var(--time-of-animation) var(--timing-function);
+
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+    line-height: 1.875;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 22px;
+  }
+}
+
+.nav-list__icon {
+  width: 9px;
+  height: 16px;
+  margin-left: auto;
+  margin-right: 36px;
+  fill: var(--text-color);
+
+  transition: fill var(--time-of-animation) var(--timing-function);
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.nav_menu-btn {
+  display: none;
+
+  @media screen and (max-width: 767.98px) {
+    display: block;
+    position: relative;
+    width: 21px;
+    height: 18px;
+    cursor: pointer;
+    z-index: 18;
+
+    span {
+      position: absolute;
+      top: calc(50% - 1px);
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: var(--accent-color);
+      transition: all 0.2s;
+
+      &:first-child {
+        top: 0;
+      }
+
+      &:last-child {
+        top: auto;
+        bottom: 0;
+      }
+    }
+
+    &.active-burger {
+      span {
+        transform: scale(0);
+
+        &:first-child {
+          transform: rotate(-45deg);
+          top: calc(50% - 1px);
+        }
+
+        &:last-child {
+          transform: rotate(45deg);
+          bottom: calc(50% - 1px);
+        }
+      }
+    }
+  }
+}

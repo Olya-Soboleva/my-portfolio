@@ -1,0 +1,18 @@
+@import './base/global';
+@import './base/reset';
+
+@import './utils/variables';
+@import './utils/fonts';
+
+@import './layout/header/header';
+
+@import './components/intro';
+@import './components/projects';
+@import './components/skills';
+@import './components/about-myself';
+
+@import './components/modal';
+@import './components/backdrop';
+@import './components/modal-form';
+
+@import './layout/footer/footer';

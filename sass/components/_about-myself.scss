@@ -1,0 +1,128 @@
+.about-myself__label {
+  @extend %label;
+}
+
+.about-myself__wrap-section {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 115px;
+  @media screen and (min-width: 768px) {
+    gap: 150px;
+  }
+}
+
+.about-myself__wrapper {
+  text-align: center;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  gap: 10px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+.about-myself__number-icon {
+  position: relative;
+  font-weight: 300;
+  font-size: 90px;
+  color: var(--bg-color);
+  -webkit-text-stroke: 1px var(--accent-color);
+
+  @media screen and (min-width: 768px) {
+    margin: 0;
+    font-size: 100px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 158px;
+  }
+}
+
+.about-myself__decor-line {
+  background-color: var(--accent-color);
+  height: 90px;
+  width: 2px;
+  @media screen and (min-width: 768px) {
+    width: 190px;
+    height: 2px;
+  }
+}
+
+.about-myself__text {
+  position: relative;
+  color: var(--bg-color);
+  background-color: var(--accent-color);
+
+  border-radius: 40px 0px;
+  padding: 17px 19px;
+
+  font-family: 'Prompt';
+  font-size: 17px;
+  line-height: 1.17;
+  max-width: 350px;
+  height: 60px;
+
+  display: flex;
+  align-items: center;
+  @media screen and (min-width: 768px) {
+    height: 100px;
+    margin: 0;
+    width: 328px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 28px;
+    min-width: 500px;
+    height: 150px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    display: block;
+    background-color: var(--accent-color);
+    width: 2px;
+    height: 90px;
+    top: 150px;
+    left: 50%;
+    transform: translateY(-50%);
+
+    @media screen and (min-width: 768px) {
+      height: 120px;
+      top: 215px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      top: 275px;
+      height: 155px;
+    }
+  }
+}
+
+.about-myself__wrapper:nth-child(odd) > .about-myself__number-icon {
+  color: var(--accent-color);
+}
+
+.about-myself__wrapper:nth-child(odd) > .about-myself__text {
+  background-color: var(--bg-color);
+  border: 2px solid var(--accent-color);
+  color: var(--text-color);
+}
+
+.about-myself__wrapper:nth-child(even):last-child > .about-myself__text {
+  &::before {
+    display: none;
+  }
+}
