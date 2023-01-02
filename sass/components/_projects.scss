@@ -18,50 +18,53 @@
     transform: scale(1.02);
   }
 }
+
 #project-1 {
   &::after {
     content: 'АЙДЕНТИКА ТА ЛОГО';
-    @extend %text-for-banner;
+    @extend %text-for-card;
   }
 }
 
 #project-2 {
   &::after {
-    content: 'ПАКУВАННЯ';
-    @extend %text-for-banner;
+    content: 'ПАКОВАННЯ';
+    @extend %text-for-card;
   }
 }
 
 #project-3 {
   &::after {
     content: 'ТИПОГРАФІКА ТА ШРИФТИ';
-    @extend %text-for-banner;
+    @extend %text-for-card;
   }
 }
 
 #project-4 {
   &::after {
     content: 'ПОСТЕРИ';
-    @extend %text-for-banner;
+    @extend %text-for-card;
   }
 }
 
 #project-5 {
   &::after {
     content: 'UX/UI DESIGN';
-    @extend %text-for-banner;
+    @extend %text-for-card;
   }
 }
 
 #project-6 {
   &::after {
     content: 'АНІМАЦІЯ';
-    @extend %text-for-banner;
+    @extend %text-for-card;
   }
 }
 
 .projects-list__link {
   position: relative;
+  display: block;
+  width: 100%;
 
   &::before {
     content: '';
@@ -74,17 +77,22 @@
 
     background-color: var(--muted-banner-color);
     backdrop-filter: blur(4.5px);
+    -webkit-backdrop-filter: blur(4.5px);
   }
 }
 
-%text-for-banner {
-  text-align: center;
-  color: var(--banner-text-color);
-  font-size: 38px;
+%text-for-card {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  display: flex;
+
+  -webkit-align-self: center;
+  align-self: center;
+  text-align: center;
+  color: var(--banner-text-color);
+  font-size: 38px;
 
   @media screen and (min-width: 768px) {
     font-size: 27px;
@@ -95,9 +103,6 @@
 }
 
 .slick-slider {
-  @media screen and (min-width: 768px) {
-    // display: none;
-  }
 }
 
 /* Ограничивающая оболочка */

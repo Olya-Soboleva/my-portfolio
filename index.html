@@ -5,12 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SOB_DESIGN-portfolio</title>
+    <link 
+      href="https://fonts.googleapis.com/css2?family=Bona+Nova:wght@400;700&display=swap" 
+      rel="stylesheet">
+    <link 
+      href="//db.onlinewebfonts.com/c/b33d18eb982e3c74055648dbd1631b7b?family=ITC+Century" 
+      rel="stylesheet" 
+      type="text/css"/>
     <link
       href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400&display=swap"
       rel="stylesheet"
     />
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" />
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init('g3F6dqt5xrtEgWFGY');
+      })();
+    </script>
+
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
@@ -115,7 +133,7 @@
                     srcset="./images/previews-of-projects/packages-desktop.png 1x, 
                           ./images/previews-of-projects/packages-desktop@2x.png 2x" 
                     src="./images/previews-of-projects/packages-desktop.png" 
-                    alt="ПАКУВАННЯ">
+                    alt="ПАКОВАННЯ">
               </a>
             </li>
             <li class="projects-list__item">
@@ -273,8 +291,8 @@
             Якщо Ви маєте питання введіть
             поштову адресу, з Вами зв’яжуться:
           </p>
-          <form onsubmit="sendEmail(); reset(); return false;" class="form">
-            <input class="form__email" type="email" name="email" id="email-by-click" placeholder="Віддіть поштову адресу" required>
+          <form class="form" id="my-form-footer">
+            <input class="form__email" type="email" name="email" id="email-footer" placeholder="Віддіть поштову адресу" required>
             <button type="submit" class="form__btn">Зв’яжись</button>
           </form>
           </div>
@@ -310,33 +328,37 @@
         <button data-modal-close class="modal-btn-close" aria-label="Close">
           <span aria-hidden="true">&times;</span>   
         </button>
-        <form onsubmit="sendForm(); reset(); return false;" class="modal-form">
+        <form class="modal-form" id="my-form-modal">
           <div class="field">
-            <label class="field__label" for="name">Ім'я
+            <label class="field__label" for="name-modal">Ім'я
             </label>
             <div class="field__wrapper">
-              <input type="text" class="field__input" name="name" id="name" placeholder="Введіть ім’я" required/>
+              <input type="text" class="field__input" name="name" id="name-modal" placeholder="Введіть ім’я" required/>
             </div>
           </div>
           <div class="field">
-            <label class="field__label" for="email">Поштову адресу</label>
+            <label class="field__label" for="email-modal">Поштову адресу</label>
             <div class="field__wrapper">
-              <input type="text" class="field__input" name="email" id="email" placeholder="Введіть поштову адресу" required/>
+              <input type="text" class="field__input" name="email" id="email-modal" placeholder="Введіть поштову адресу" required/>
             </div>
           </div>
           <div class="field">
-            <label class="field__label" for="message">Коментар</label>
+            <label class="field__label" for="message-modal">Коментар</label>
             <div class="field__wrapper">
               <textarea
               name="comment"
               class="field__textarea"
-              id="message"
+              id="message-modal"
               placeholder="Залишити коментар"
               ></textarea>
             </div>
           </div>
           <button class="submit__btn" type="submit">Зв’яжись</button>
         </form>
+        <div class="modal-form-message" id="modal-form-status">
+          <h2>Дякую Вам</h2>
+          <p> Я зв'яжуся з вами якомога швидше.</p>
+        </div>
       </div>
     </div>
 

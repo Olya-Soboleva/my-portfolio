@@ -1,32 +1,46 @@
-function sendForm() {
-    Email.send({
-        SecureToken: 'be8f7ab5-d30d-43d0-b45b-176f956cf116',
-        // Host : "smtp.elasticemail.com",
-        // Username : "hel.sob.orders.2022@gmail.com",
-        // Password : "A41F387B2CA3EE0E33A48EC8B63C4903A536",
-        To : 'olysob7@gmail.com',
-        From : document.getElementById('email').value,
-        Subject : "Тобі відповіли на сайті, перевірь!)",
-        Body: "Ім'я: " + document.getElement('name').value +
-            "<br> Пошта: " + document.getElementById('email').value +
-            "<br> Коментар: " + document.getElementById('message').value,
-    }).then(
-    message => alert(message)
-    );
+const serviceID = 'service_chj8vfp';
+const modalTemplateID = 'template_v4ktucd';
+const footerTemplateID = 'template_b2b6mw7  ';
+
+
+const formModal = document.getElementById('my-form-modal');
+const formFooter = document.getElementById('my-form-footer');
+
+
+formModal.addEventListener("submit", handleSubmitModalForm);
+formFooter.addEventListener("submit", handleSubmitFooterForm);
+
+async function handleSubmitModalForm(evt) {
+    evt.preventDefault();
+    const status = document.getElementById("modal-form-status");
+
+    const paramsModal = {
+        name: document.getElementById('name-modal').value,
+        email: document.getElementById('email-modal').value,
+        message: document.getElementById('message-modal').value,
+    };
+
+    formModal.style.display = 'none';
+    status.style.display = 'block';
+
+    emailjs.send(serviceID, modalTemplateID, paramsModal).then((res) => {
+        console.log(res);
+    }).catch((err) => { console.log(err) })
+    
+    evt.currentTarget.reset();
 }
 
+async function handleSubmitFooterForm(evt) {
+    evt.preventDefault();
+    
+    const paramsFooter = {
+        email: document.getElementById('email-footer').value,
+    };
 
-function sendEmail() {
-    Email.send({
-        SecureToken: 'be8f7ab5-d30d-43d0-b45b-176f956cf116',
-        // Host : "smtp.elasticemail.com",
-        // Username : "hel.sob.orders.2022@gmail.com",
-        // Password : "A41F387B2CA3EE0E33A48EC8B63C4903A536",
-        To: 'olysob7@gmail.com',
-        From : document.getElementById('email-by-click').value,
-        Subject : "Тобі відповіли на сайті, перевірь!)",
-        Body: "Пошта: " + document.getElementById('email').value,
-    }).then(
-    message => alert(message)
-    );
+
+    emailjs.send(serviceID, footerTemplateID, paramsFooter).then((res) => {
+        console.log(res);
+    }).catch((err) => { console.log(err) })
+    
+    evt.currentTarget.reset();
 }

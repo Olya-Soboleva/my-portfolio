@@ -6,7 +6,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-
+  height: 474px;
   .backdrop.is-hidden & {
     transform: translate(-50%, -50%) scale(0.9);
   }
@@ -28,6 +28,7 @@
   }
 
   @media screen and (min-width: 1200px) {
+    height: 483px;
     max-width: 528px;
   }
 }
