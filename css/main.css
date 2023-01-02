@@ -921,9 +921,9 @@ textarea {
 }
 
 .about-myself__number-icon {
-  font-family: ITC Century;
+  font-family: "Libre Baskerville", sans-serif;
   position: relative;
-  font-weight: 300;
+  font-weight: 700;
   font-size: 90px;
   color: var(--bg-color);
   -webkit-text-stroke: 1px var(--accent-color);
